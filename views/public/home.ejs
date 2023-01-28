@@ -1,0 +1,15 @@
+<%- include('../layouts/header.ejs', {}) %>
+<h1>Welcome to the home page</h1>
+
+<h2>Login form</h2>
+
+<form action="/login" method="post" id="login-form">
+   <input type="hidden" name="CSRFToken" value="<%= csrfToken %>" />
+   <input type="text" name="email" value="test" />
+   Password ("a" is correct password)
+   <input type="text" name="password" value="a" />
+   <button type="submit">Login</button>
+</form>
+
+<BR /><BR />
+CSRF token: <%= csrfToken %> <%- include('../layouts/footer.ejs', {}) %>

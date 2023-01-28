@@ -1,0 +1,13 @@
+<%- include('../layouts/header.ejs', {}) %>
+
+<h1>Protected area</h1>
+
+<form action="/login" method="post" id="login-form">
+   <input type="hidden" name="CSRFToken" value="<%= csrfToken %>" />
+   Password ("a" is correct password)
+   <input type="text" />
+   <button type="submit">Login</button>
+</form>
+
+<BR /><BR />
+CSRF token: <%= csrfToken %> <%- include('../layouts/footer.ejs', {}) %>
